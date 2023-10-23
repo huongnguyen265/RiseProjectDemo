@@ -20,6 +20,9 @@ public class LogoutTest extends CommonBase{
 	LoginPage page = new LoginPage(driver);
 	page.LoginFuntion("admin@demo.com", "riseDemo");
 	}
+	/**
+	 * Test case check logout function
+	 */
 	@Test (priority = 1)
 	public void logOut() {
 		DashBoardPage dashboardpage= new DashBoardPage(driver);

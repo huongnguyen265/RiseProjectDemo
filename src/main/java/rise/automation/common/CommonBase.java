@@ -22,7 +22,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 		public WebDriver initChromeDriver(String URL)
 		{
 			ChromeOptions options = new ChromeOptions();
-			options.setHeadless(true);
+//			options.setHeadless(true);
 			System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");		
 			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();

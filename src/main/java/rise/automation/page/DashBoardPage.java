@@ -9,8 +9,8 @@ public class DashBoardPage {
 	 private By xpathUser = By.xpath("//a[@id= 'user-dropdown']");
 	 public By btnLogOut = By.xpath("//a[contains(normalize-space(),'Sign Out')]");
 	 public By clientLink = By.xpath("//span[text()= 'Clients']");
-	 
-	 
+	 public By xpathProject = By.xpath("//span[text()='Projects']//parent::a");
+
 	 private WebDriver driver;
 	 public DashBoardPage (WebDriver driver) {
 		 this.driver = driver;
@@ -23,7 +23,12 @@ public class DashBoardPage {
 			 if(btnLogout.isDisplayed()) {
 				 btnLogout.click();
 			 }
-		 }
-		 
+		 } 
+	 }
+	 public void redirectProject() {
+		 WebElement projects = driver.findElement(xpathProject);
+		 if(projects.isDisplayed()) {
+			 projects.click();
+		 }	 
 	 }
 }

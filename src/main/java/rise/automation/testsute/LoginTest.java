@@ -16,6 +16,11 @@ public class LoginTest extends CommonBase {
 	public void init() {
 	driver= initChromeDriver(AccountConstaint.webURL);	
 	}
+	/**
+	 * Test case validate login function successfully or not in case
+	 * NotValid: IncorrectEmail, incorrectPassword, incorrectEmail and password
+	 * Valid: Correct email and password
+	 */
 	@Test (priority = 4)
 	public void loginSuccess() {
 		LoginPage page = new LoginPage(driver);
